@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation, useLoaderData } from 'react-router-dom';
-import {readBook, wishBook } from '../Utils/Utils';
+import { readBook, wishBook } from '../Utils/Utils';
 
 const BookDetails = () => {
   const allBooks = useLoaderData();
@@ -8,6 +8,8 @@ const BookDetails = () => {
   const id = parseInt(location.pathname.split('book/')[1]);
   // const book = allBooks.filter(book => book.bookId === id)[0];
   const book = allBooks.find(book => book.bookId === id);
+  // const { pathname } = window.location;
+//   console.log(pathname);
 
   const {
     bookId,
@@ -22,6 +24,7 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
+
   return (
     <div className="grid grid-cols-2 gap-12 mt-[52px]">
       <div className="p-[75px] rounded-2xl bg-[#1313130D]">
@@ -93,10 +96,16 @@ const BookDetails = () => {
           </div>
         </div>
         <div className="flex gap-4 mt-8">
-          <button onClick={()=> readBook(book)} className="text-[#131313] text-lg font-semibold py-[18px] px-[28px] rounded-lg border">
+          <button
+            onClick={() => readBook(bookId)}
+            className="text-[#131313] text-lg font-semibold py-[18px] px-[28px] rounded-lg border"
+          >
             Read
           </button>
-          <button onClick={()=> wishBook(book)} className="text-white bg-[#50B1C9] text-lg font-semibold py-[18px] px-[28px] rounded-lg border">
+          <button
+            onClick={() => wishBook(bookId)}
+            className="text-white bg-[#50B1C9] text-lg font-semibold py-[18px] px-[28px] rounded-lg border"
+          >
             WishList
           </button>
         </div>

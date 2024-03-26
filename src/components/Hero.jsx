@@ -9,7 +9,7 @@ const Hero = () => {
           <h4 className="font-play text-[#131313] text-[56px] font-bold">
             Books to freshen up your bookshelf
           </h4>
-          <Link rel="stylesheet" to>
+          <Link rel="stylesheet" to="/listed-books">
             <button className="text-white text-xl font-bold rounded-lg bg-[#23BE0A] py-5 px-7">
               View The List
             </button>

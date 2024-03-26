@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Nav = () => {
   return (
@@ -8,18 +8,39 @@ const Nav = () => {
           <h3 className="font-bold text-[#131313]">Book Vibe</h3>
         </a>
       </div>
-      <div className="navbar-center flex">
-        <ul className="menu menu-horizontal text-lg font-normal text-[#131313CC]">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/list">Listed Books</Link>
-          </li>
-          <li>
-            <Link to="/pages">Pages to Read</Link>
-          </li>
-        </ul>
+      <div className="navbar-center flex justify-center gap-3">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal '
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'text-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal'
+          }
+          to="/listed-books"
+        >
+          Listed Books
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'text-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal'
+          }
+          to="/pages"
+        >
+          Pages to Read
+        </NavLink>
       </div>
       <div className="navbar-end">
         <div className="hidden lg:flex gap-4">

@@ -8,7 +8,7 @@
     "totalPages": 180,
     "rating": 4.5,
     "category": "Fiction",
-    "tags": ["Classic", "Romance"],
+    "tags": ["#Classic", "#Romance"],
     "publisher": "Scribner",
     "yearOfPublishing": 1925
   },
@@ -21,7 +21,7 @@
     "totalPages": 281,
     "rating": 4.8,
     "category": "Fiction",
-    "tags": ["Classic", "Legal Drama"],
+    "tags": ["#Classic", "#Legal Drama"],
     "publisher": "J. B. Lippincott & Co.",
     "yearOfPublishing": 1960
   },
@@ -34,7 +34,7 @@
     "totalPages": 328,
     "rating": 4.7,
     "category": "Fiction",
-    "tags": ["Dystopian", "Political Fiction"],
+    "tags": ["#Dystopian", "#Political Fiction"],
     "publisher": "Secker & Warburg",
     "yearOfPublishing": 1949
   },
@@ -47,7 +47,7 @@
     "totalPages": 432,
     "rating": 4.6,
     "category": "Fiction",
-    "tags": ["Classic", "Romance"],
+    "tags": ["#Classic", "#Romance"],
     "publisher": "T. Egerton, Whitehall",
     "yearOfPublishing": 1813
   },
@@ -60,7 +60,7 @@
     "totalPages": 224,
     "rating": 4.4,
     "category": "Fiction",
-    "tags": ["Classic", "Young Adult"],
+    "tags": ["#Classic", "#Young Adult"],
     "publisher": "Little, Brown and Company",
     "yearOfPublishing": 1951
   },
@@ -73,7 +73,7 @@
     "totalPages": 310,
     "rating": 4.9,
     "category": "Fantasy",
-    "tags": ["Classic", "Adventure"],
+    "tags": ["#Classic", "#Adventure"],
     "publisher": "Allen & Unwin",
     "yearOfPublishing": 1937
   },
@@ -86,7 +86,7 @@
     "totalPages": 208,
     "rating": 4.7,
     "category": "Fiction",
-    "tags": ["Inspiration", "Philosophy"],
+    "tags": ["#Inspiration", "#Philosophy"],
     "publisher": "HarperCollins",
     "yearOfPublishing": 1988
   },
@@ -99,7 +99,7 @@
     "totalPages": 332,
     "rating": 4.8,
     "category": "Fantasy",
-    "tags": ["Magic", "Adventure"],
+    "tags": ["#Magic", "#Adventure"],
     "publisher": "Bloomsbury Publishing",
     "yearOfPublishing": 1997
   },
@@ -112,7 +112,7 @@
     "totalPages": 454,
     "rating": 4.3,
     "category": "Mystery",
-    "tags": ["Suspense", "Thriller"],
+    "tags": ["#Suspense", "#Thriller"],
     "publisher": "Doubleday",
     "yearOfPublishing": 2003
   },
@@ -125,7 +125,7 @@
     "totalPages": 374,
     "rating": 4.6,
     "category": "Young Adult",
-    "tags": ["Dystopian", "Adventure"],
+    "tags": ["#Dystopian", "#Adventure"],
     "publisher": "Scholastic",
     "yearOfPublishing": 2008
   }
