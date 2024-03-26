@@ -36,35 +36,52 @@ const ListedBooks = () => {
     );
     setShowBooks(readBooks);
   };
+ 
+  const sortBooks = property => {
+    setShowBooks(prevData => {
+      return [...prevData].sort((a, b) => {
+        if (a[property] > b[property]) return -1;
+        if (a[property] < b[property]) return 1;
+        return 0;
+      });
+    });
+  };
+
+
+  const sortByRating = () => {
+    sortBooks('rating');
+  };
+
+  const sortByIdYear = () => {
+    sortBooks('yearOfPublishing');
+  };
+  const sortByPage = () => {
+    sortBooks('totalPages');
+  };
+
+
 
   return (
     <div className="text-center">
       <h4 className="text-[#131313] text-3xl font-bold text-center rounded-2xl bg-[#1313130D] my-8 py-8">
         Books
       </h4>
-      <details className="dropdown mb-32">
+      <details className="dropdown mb-14">
         <summary className="m-1 btn text-white text-lg font-semibold py-3 px-5 rounded-lg bg-[#23BE0A] hover:bg-green-300 hover:text-black">
           Sort By <RiArrowDropDownLine />
         </summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-          <li>
+          <li onClick={sortByRating}>
             <a>Rating</a>
           </li>
-          <li>
+          <li onClick={sortByPage}>
             <a>Number Of Pages</a>
           </li>
-          <li>
+          <li onClick={sortByIdYear}>
             <a>Published Year</a>
           </li>
         </ul>
       </details>
-      <ul>
-        {/* {
-                    displayJobs.map(job => <li key={job.id}>
-                        <span>{job.job_title} {job.company_name}: {job.remote_or_onsite} </span>
-                    </li>)
-                } */}
-      </ul>
       <div className="flex items-center overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap mb-8">
         <Link
           to={``}
