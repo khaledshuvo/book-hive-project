@@ -67,7 +67,7 @@ const ListedBooks = () => {
         Books
       </h4>
       <details className="dropdown mb-14">
-        <summary className="m-1 btn text-white text-lg font-semibold py-3 px-5 rounded-lg bg-[#23BE0A] hover:bg-green-300 hover:text-black">
+        <summary className="m-1 btn text-white text-lg font-semibold py-3 px-5 rounded-lg bg-[#23BE0A] hover:bg-slate-800 ">
           Sort By <RiArrowDropDownLine />
         </summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -82,7 +82,7 @@ const ListedBooks = () => {
           </li>
         </ul>
       </details>
-      <div className="flex items-center overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap mb-8">
+      <div className="flex items-center justify-center mb-8 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap">
         <Link
           to={``}
           onClick={handleReadBooks}

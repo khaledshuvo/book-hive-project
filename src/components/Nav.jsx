@@ -8,7 +8,7 @@ const Nav = () => {
           <h3 className="font-bold text-[#131313]">Book Vibe</h3>
         </a>
       </div>
-      <div className="navbar-center flex justify-center gap-3">
+      <div className="navbar-center flex justify-center gap-8">
         <NavLink
           className={({ isActive }) =>
             isActive
@@ -23,8 +23,8 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal'
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal '
           }
           to="/listed-books"
         >
@@ -34,12 +34,32 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal'
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal '
           }
-          to="/pages"
+          to="/pages-to-read"
         >
           Pages to Read
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal '
+          }
+          to="/terms"
+        >
+          Terms
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-lg font-normal '
+          }
+          to="/contact-us"
+        >
+          Contact Us
         </NavLink>
       </div>
       <div className="navbar-end">
