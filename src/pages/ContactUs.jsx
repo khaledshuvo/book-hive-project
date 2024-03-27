@@ -11,7 +11,7 @@ const ContactUs = () => {
   const handleSubmit = event => {
     event.preventDefault();
     if (!isChecked) {
-      toast .error('Please check on the Terms and Conditions field.');
+      toast.error('Please check on the Terms and Conditions field.');
       return;
     }
     //     const user = { name: name, email: email, message: message };
@@ -21,9 +21,9 @@ const ContactUs = () => {
     <div className="">
       <form
         onSubmit={event => handleSubmit(event)}
-        className="flex flex-col mt-5 w-2/3 border rounded-2xl mx-auto bg-[#1313180D] my-8 p-8 text-center"
+        className="flex flex-col mt-5 w-full lg:w-2/3 border rounded-2xl mx-auto bg-[#1313180D] my-8 p-8 text-center"
       >
-        <h3 className="text-[#131318] text-4xl font-medium font-play">
+        <h3 className="text-[#131318] text-3xl lg:text-4xl font-medium font-play">
           Contact Us
         </h3>
         <h3 className="text-[#5a5a5d] text-base font-medium py-5 mb-5 border-b border-[#1313181A]">
@@ -71,8 +71,8 @@ const ContactUs = () => {
       </form>
       {isSubmit && (
         <div className="fixed top-0 bottom-0 right-0 left-0 z-10 h-screen w-full flex justify-center items-center bg-[#8EDF6E]">
-          <div className="h-1/3 w-1/2 py-12 px-10 bg-white rounded-xl text-center">
-            <h4 className="text-[#131318] text-3xl font-medium font-play mb-10">
+          <div className="h-2/3 lg:h-1/3 w-2/3 lg:w-1/2 py-5 lg:py-12 px-5 lg:px-10 bg-white rounded-xl text-center">
+            <h4 className="text-[#131318] text-2xl lg:text-3xl font-medium font-play mb-10">
               You have submitted the form successfully!
             </h4>
             <p className="text-lg mb-3 text-left">
