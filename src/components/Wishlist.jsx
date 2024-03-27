@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BookContext } from './ListedBooks';
+import { BookContext } from '../pages/ListedBooks';
 import WishedBook from './WishedBook';
 
 const Wishlist = () => {

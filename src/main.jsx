@@ -7,12 +7,12 @@ import ErrorPage from './components/ErrorPage';
 import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
 import BookDetails from './components/BookDetails';
-import ListedBooks from './components/ListedBooks';
+import ListedBooks from './pages/ListedBooks';
 import ReadBooks from './components/ReadBooks';
 import Wishlist from './components/Wishlist';
-import PagesToRead from './components/PagesToRead';
-import Terms from './components/Terms';
-import ContactUs from './ContactUs';
+import PagesToRead from './pages/PagesToRead';
+import Terms from './pages/Terms';
+import ContactUs from './pages/ContactUs';
 
 const router = createBrowserRouter([
   {
