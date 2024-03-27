@@ -9,7 +9,7 @@ const BookDetails = () => {
   // const book = allBooks.filter(book => book.bookId === id)[0];
   const book = allBooks.find(book => book.bookId === id);
   // const { pathname } = window.location;
-//   console.log(pathname);
+  //   console.log(pathname);
 
   const {
     bookId,

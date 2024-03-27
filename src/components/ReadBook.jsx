@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import locationIcon from '../assets/location.svg';
 import pageIcon from '../assets/page.svg';
 import publisherIcon from '../assets/publisher.svg';
@@ -57,9 +58,11 @@ const ReadBook = ({ book }) => {
           <h3 className="text-[#FFAC33] text-base font-normal py-[10px] px-5 rounded-[30px] bg-[#FFAC3326]">
             Rating: {rating}
           </h3>
-          <h3 className="text-white text-lg font-medium py-[10px] px-5 rounded-[30px] bg-[#23BE0A]">
-            View Details
-          </h3>
+          <Link to={`/book/${bookId}`}>
+            <h3 className="text-white text-lg font-medium py-[10px] px-5 rounded-[30px] bg-[#23BE0A]">
+              View Details
+            </h3>
+          </Link>
         </div>
       </div>
     </div>

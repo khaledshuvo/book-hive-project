@@ -11,3 +11,5 @@ Features:
 - tailwind CSS design
 - Toast Message
 - LocalStorage Implementation
+- Custom Chart For Read Books
+- Separate Wishlist And Read List

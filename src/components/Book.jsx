@@ -2,15 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ratingImg from '../assets/rating.svg';
 const Book = ({ singleBook }) => {
-  const {
-    bookId,
-    bookName,
-    author,
-    image,
-    rating,
-    category,
-    tags,
-  } = singleBook;
+  const { bookId, bookName, author, image, rating, category, tags } =
+    singleBook;
   return (
     <Link
       to={`/book/${bookId}`}

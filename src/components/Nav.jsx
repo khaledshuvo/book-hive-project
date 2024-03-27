@@ -5,7 +5,9 @@ const Nav = () => {
     <div className="navbar">
       <div className="navbar-start">
         <a className="btn btn-ghost text-xl lg:text-3xl">
-          <h3 className="font-bold text-[#131313]">Book Vibe</h3>
+          <Link to="/">
+            <h3 className="font-bold text-[#131313]">Book Vibe</h3>
+          </Link>
         </a>
       </div>
       <div className="navbar-center flex justify-center gap-8">
