@@ -17,6 +17,7 @@ const WishedBook = ({ book }) => {
     publisher,
     yearOfPublishing,
   } = book;
+  
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 p-6 rounded-2xl border border-[#13131326]">
       <div className="px-[50px] py-[30px] rounded-2xl bg-[#1313130D] flex justify-center items-center">

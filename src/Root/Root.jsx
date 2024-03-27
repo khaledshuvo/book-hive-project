@@ -3,6 +3,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const Root = () => {
+  
   return (
     <div>
       <div className="lg:mx-[135px] mx-[10px] lg:mt-10 mt-4 font-work">
