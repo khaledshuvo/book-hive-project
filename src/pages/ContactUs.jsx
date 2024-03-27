@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -10,6 +11,7 @@ const ContactUs = () => {
   const handleSubmit = event => {
     event.preventDefault();
     if (!isChecked) {
+      toast .error('Please check on the Terms and Conditions field.');
       return;
     }
     //     const user = { name: name, email: email, message: message };

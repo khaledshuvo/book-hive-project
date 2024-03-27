@@ -63,14 +63,14 @@ const ListedBooks = () => {
 
   return (
     <div className="text-center">
-      <h4 className="text-[#131313] text-3xl font-bold text-center rounded-2xl bg-[#1313130D] my-8 py-8">
+      <h4 className="text-[#131313] text-2xl lg:text-3xl font-bold text-center rounded-2xl bg-[#1313130D] my-3 lg:my-8 py-3 lg:py-8">
         Books
       </h4>
-      <details className="dropdown mb-14">
-        <summary className="m-1 btn text-white text-lg font-semibold py-3 px-5 rounded-lg bg-[#23BE0A] hover:bg-slate-800 ">
+      <details className="dropdown mb-5 lg:mb-14">
+        <summary className="m-1 btn text-white texy-sm lg:text-lg font-semibold py-1 lg:py-3 px-2 lg:px-5 rounded-lg bg-[#23BE0A] hover:bg-slate-800 ">
           Sort By <RiArrowDropDownLine />
         </summary>
-        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+        <ul className="p-1 lg:p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
           <li onClick={sortByRating}>
             <a>Rating</a>
           </li>

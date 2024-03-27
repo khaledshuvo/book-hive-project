@@ -26,12 +26,12 @@ const BookDetails = () => {
   } = book;
 
   return (
-    <div className="grid grid-cols-2 gap-12 mt-[52px]">
-      <div className="p-[75px] rounded-2xl bg-[#1313130D]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mt-[25px] lg:mt-[52px]">
+      <div className="p-[15px] lg:p-[75px] rounded-2xl bg-[#1313130D] flex justify-center items-center">
         <img className="w-[425px] h-[565px]" src={image} alt="" />
       </div>
       <div>
-        <h3 className="text-[#131313] font-play text-[40px] font-bold">
+        <h3 className="text-[#131313] font-play text-[30px] lg:text-[40px] font-bold">
           {bookName}
         </h3>
         <h3 className="text-[#131313CC] text-xl font-medium my-4 pb-6 border-b">
@@ -98,13 +98,13 @@ const BookDetails = () => {
         <div className="flex gap-4 mt-8">
           <button
             onClick={() => readBook(bookId)}
-            className="text-[#131313] text-lg font-semibold py-[18px] px-[28px] rounded-lg border"
+            className="text-[#131313] text-base lg:text-lg font-semibold py-[8px] lg:py-[18px] px-[15px] lg:px-[28px] rounded-lg border"
           >
             Read
           </button>
           <button
             onClick={() => wishBook(bookId)}
-            className="text-white bg-[#50B1C9] text-lg font-semibold py-[18px] px-[28px] rounded-lg border"
+            className="text-white bg-[#50B1C9] text-base lg:text-lg font-semibold py-[8px] lg:py-[18px] px-[15px] lg:px-[28px] rounded-lg border"
           >
             WishList
           </button>

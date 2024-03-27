@@ -2,7 +2,9 @@
 
 ## Live site:
 
-- Click here- [Book Vibe](https://ph-a8.vercel.app/)
+- Click here- [Book Vibe on vercel](https://ph-a8-by-khaled.vercel.app/)
+- Click here- [Book Vibe on surge](https://ph-a8-by-khaled.surge.sh/)
+- Click here- [Book Vibe on netlify](https://ph-a8-by-khaled.netlify.app/)
 
 Features:
 

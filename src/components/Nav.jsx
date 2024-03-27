@@ -2,20 +2,20 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <div className="navbar">
-      <div className="navbar-start">
-        <a className="btn btn-ghost text-xl lg:text-3xl">
-          <Link to="/">
-            <h3 className="font-bold text-[#131313]">Book Vibe</h3>
-          </Link>
-        </a>
+    <div className="flex justify-between items-center">
+      <div className="">
+        <Link to="/">
+          <button className="font-bold text-xs lg:text-3xl text-[#131313]">
+            Book Vibe
+          </button>
+        </Link>
       </div>
-      <div className="navbar-center flex justify-center gap-8">
+      <div className="flex justify-center items-center gap-3 lg:gap-8">
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal '
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-xs lg:text-lg font-normal lg:font-semibold py-[4px] lg:py-[10px] px-[7px] lg:px-[15px] border-2 border-[#23BE0A] rounded-lg hidden lg:flex'
+              : 'text-[#131313CC] text-xs lg:text-lg font-normal hidden lg:flex'
           }
           to="/"
         >
@@ -25,8 +25,8 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal '
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-xs lg:text-lg font-normal lg:font-semibold py-[4px] lg:py-[10px] px-[7px] lg:px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-xs lg:text-lg font-normal'
           }
           to="/listed-books"
         >
@@ -36,8 +36,8 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal '
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-xs lg:text-lg font-normal lg:font-semibold py-[4px] lg:py-[10px] px-[7px] lg:px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-xs lg:text-lg font-normal'
           }
           to="/pages-to-read"
         >
@@ -46,8 +46,8 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal '
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-xs lg:text-lg font-normal lg:font-semibold py-[4px] lg:py-[10px] px-[7px] lg:px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-xs lg:text-lg font-normal'
           }
           to="/terms"
         >
@@ -56,20 +56,20 @@ const Nav = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-lg font-semibold py-[10px] px-[15px] border-2 border-[#23BE0A] rounded-lg'
-              : 'text-[#131313CC] text-lg font-normal '
+              ? 'text-[#23BE0A] hover:text-black hover:bg-[#23BE0A] text-xs lg:text-lg font-normal lg:font-semibold py-[4px] lg:py-[10px] px-[7px] lg:px-[15px] border-2 border-[#23BE0A] rounded-lg'
+              : 'text-[#131313CC] text-xs lg:text-lg font-normal'
           }
           to="/contact-us"
         >
           Contact Us
         </NavLink>
       </div>
-      <div className="navbar-end">
+      <div className="">
         <div className="hidden lg:flex gap-4">
-          <button className="rounded-lg px-7 py-4 bg-[#23BE0A] text-white text-lg font-semibold">
+          <button className="rounded-lg px-3 lg:px-7 py-2 lg:py-4 bg-[#23BE0A] text-white text-xs lg:text-lg font-normal lg:font-semibold">
             Sign In
           </button>
-          <button className="rounded-lg px-7 py-4 bg-[#59C6D2] text-white text-lg font-semibold">
+          <button className="rounded-lg px-3 lg:px-7 py-2 lg:py-4 bg-[#59C6D2] text-white text-xs lg:text-lg font-normal lg:font-semibold">
             Sign Up
           </button>
         </div>
