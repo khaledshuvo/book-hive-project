@@ -13,5 +13,7 @@ Features:
 - tailwind CSS design
 - Toast Message
 - LocalStorage Implementation
-- Custom Chart For Read Books
+- Custom Rechart For Read Books
+- Mobile Responsive Rechart 
 - Separate Wishlist And Read List
+- Adaptable & Robust

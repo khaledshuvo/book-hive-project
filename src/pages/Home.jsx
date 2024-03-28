@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 const Home = () => {
   const allBooks = useLoaderData()
   return (
-    <div className="flex mt-[20px] lg:mt-[52px] relative flex-col justify-center items-center min-h-[calc(100vh-200px)]">
+    <div className="flex mt-[20px] lg:mt-[52px] relative flex-col justify-center items-center">
       <Hero />
       <Books allBooks={allBooks} />
     </div>

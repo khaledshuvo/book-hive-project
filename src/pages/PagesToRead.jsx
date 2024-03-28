@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { getReadBooks } from '../Utils/Utils';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -27,21 +27,23 @@ const PagesToRead = () => {
   const readBooksId = getReadBooks();
   const readBooks = allBooks.filter(book => readBooksId.includes(book.bookId));
   return (
-    <BarChart className="mt-8" width={1200} height={500} data={readBooks}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="bookName" />
-      <YAxis />
-      <Bar
-        dataKey="totalPages"
-        fill="#8884d8"
-        shape={<TriangleBar />}
-        label={{ position: 'top' }}
-      >
-        {readBooks.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+    <ResponsiveContainer className="mt-8" width="100%" height={517}>
+      <BarChart data={readBooks}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="bookName" />
+        <YAxis />
+        <Bar
+          dataKey="totalPages"
+          fill="#8884d8"
+          shape={<TriangleBar />}
+          label={{ position: 'top' }}
+        >
+          {readBooks.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+          ))}
+        </Bar>
+      </BarChart>
+    </ResponsiveContainer>
   );
 };
 
