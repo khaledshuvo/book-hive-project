@@ -14,6 +14,7 @@ Features:
 - Toast Message
 - LocalStorage Implementation
 - Custom Rechart For Read Books
-- Mobile Responsive Rechart 
+- Mobile Responsive Rechart
 - Separate Wishlist And Read List
+- Sort Functions
 - Adaptable & Robust

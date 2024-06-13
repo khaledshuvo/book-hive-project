@@ -2,7 +2,7 @@ import toast from 'react-hot-toast';
 // wish book part
 export const getWishedBooks = () => {
   let books = [];
-  const storedBooks = localStorage.getItem('wishBook');
+  const storedBooks = localStorage.getItem('bookVibeWishList');
   if (storedBooks) {
     books = JSON.parse(storedBooks);
   }
@@ -20,7 +20,7 @@ export const wishBook = bookId => {
     return toast.error('The Book is already in your wishlist!');
   }
   books.push(bookId);
-  localStorage.setItem('wishBook', JSON.stringify(books));
+  localStorage.setItem('bookVibeWishList', JSON.stringify(books));
   toast.success('The Book is added to your wishlist!');
 };
 
@@ -28,7 +28,7 @@ export const wishBook = bookId => {
 
 export const getReadBooks = () => {
   let books = [];
-  const storedBooks = localStorage.getItem('readBook');
+  const storedBooks = localStorage.getItem('bookVibeReadList');
   if (storedBooks) {
     books = JSON.parse(storedBooks);
   }
@@ -42,42 +42,42 @@ export const readBook = bookId => {
     return toast.error('This book is already read!');
   }
   oldBooks.push(bookId);
-  localStorage.setItem('readBook', JSON.stringify(oldBooks));
-  deleteBook(bookId);
+  localStorage.setItem('bookVibeReadList', JSON.stringify(oldBooks));
+  deleteBookFromWishlist(bookId);
   toast.success('The Book is successfully marked as read!');
 };
 
 //delete part
-export const deleteBook = id => {
+export const deleteBookFromWishlist = id => {
   let books = getWishedBooks();
   const remaining = books.filter(b => b !== id);
-  localStorage.setItem('wishBook', JSON.stringify(remaining));
+  localStorage.setItem('bookVibeWishList', JSON.stringify(remaining));
 };
 
-//Id related
-export const getId = () => {
-  let page = [];
-  const storedBooks = localStorage.getItem('visiting');
-  if (storedBooks) {
-    books = JSON.parse(storedBooks);
-  }
-  return books;
-};
+// For all project use
 
-export const setId = bookId => {
-  let oldBooks = getReadBooks();
-  const isExist = oldBooks.find(b => b === bookId);
-  if (isExist) {
-    return toast.error('This book is already read!');
-  }
-  oldBooks.push(bookId);
-  localStorage.setItem('visiting', JSON.stringify(oldBooks));
-  deleteBook(bookId);
-  toast.success('The Book is successfully marked as read!');
-};
+// export const getReadBooks = () => {
+//   let page = [];
+//   const storedBooks = localStorage.getItem('visiting');
+//   if (storedBooks) {
+//     books = JSON.parse(storedBooks);
+//   }
+//   return books;
+// };
 
-export const deleteId = id => {
-  let books = getWishedBooks();
-  const remaining = books.filter(b => b !== id);
-  localStorage.setItem('visiting', JSON.stringify(remaining));
-};
+// export const setId = bookId => {
+//   let oldBooks = getReadBooks();
+//   const isExist = oldBooks.find(b => b === bookId);
+//   if (isExist) {
+//     return toast.error('This book is already read!');
+//   }
+//   oldBooks.push(bookId);
+//   localStorage.setItem('visiting', JSON.stringify(oldBooks));
+//   toast.success('The Book is successfully marked as read!');
+// };
+
+// export const deleteId = id => {
+//   let books = getWishedBooks();
+//   const remaining = books.filter(b => b !== id);
+//   localStorage.setItem('visiting', JSON.stringify(remaining));
+// };

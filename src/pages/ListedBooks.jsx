@@ -12,31 +12,31 @@ const ListedBooks = () => {
   const [showBooks, setShowBooks] = useState([]);
 
   useEffect(() => {
-    const readBooksId = getReadBooks();
+    const readBooksIds = getReadBooks();
     const readBooks = allBooks.filter(book =>
-      readBooksId.includes(book.bookId)
+      readBooksIds.includes(book.bookId)
     );
     setShowBooks(readBooks);
-  }, [allBooks]);
+  }, []);
 
   const handleWishedBooks = () => {
     setTabIndex(1);
-    const wishedBooksId = getWishedBooks();
+    const wishedBooksIds = getWishedBooks();
     const wishedBooks = allBooks.filter(book =>
-      wishedBooksId.includes(book.bookId)
+      wishedBooksIds.includes(book.bookId)
     );
     setShowBooks(wishedBooks);
   };
 
   const handleReadBooks = () => {
     setTabIndex(0);
-    const readBooksId = getReadBooks();
+    const readBooksIds = getReadBooks();
     const readBooks = allBooks.filter(book =>
-      readBooksId.includes(book.bookId)
+      readBooksIds.includes(book.bookId)
     );
     setShowBooks(readBooks);
   };
- 
+
   const sortBooks = property => {
     setShowBooks(prevData => {
       return [...prevData].sort((a, b) => {
@@ -47,19 +47,16 @@ const ListedBooks = () => {
     });
   };
 
-
   const sortByRating = () => {
     sortBooks('rating');
   };
 
-  const sortByIdYear = () => {
+  const sortByYear = () => {
     sortBooks('yearOfPublishing');
   };
   const sortByPage = () => {
     sortBooks('totalPages');
   };
-
-
 
   return (
     <div className="text-center">
@@ -68,7 +65,7 @@ const ListedBooks = () => {
       </h4>
       <details className="dropdown mb-5 lg:mb-14">
         <summary className="m-1 btn text-white texy-sm lg:text-lg font-semibold py-1 lg:py-3 px-2 lg:px-5 rounded-lg bg-[#23BE0A] hover:bg-slate-800 ">
-          Sort By <RiArrowDropDownLine />
+          Sort By: <RiArrowDropDownLine />
         </summary>
         <ul className="p-1 lg:p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
           <li onClick={sortByRating}>
@@ -77,7 +74,7 @@ const ListedBooks = () => {
           <li onClick={sortByPage}>
             <a>Number Of Pages</a>
           </li>
-          <li onClick={sortByIdYear}>
+          <li onClick={sortByYear}>
             <a>Published Year</a>
           </li>
         </ul>

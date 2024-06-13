@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { getReadBooks } from '../Utils/Utils';
@@ -18,7 +17,6 @@ const getPath = (x, y, width, height) => {
 
 const TriangleBar = props => {
   const { fill, x, y, width, height } = props;
-
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
@@ -26,6 +24,7 @@ const PagesToRead = () => {
   const allBooks = useLoaderData();
   const readBooksId = getReadBooks();
   const readBooks = allBooks.filter(book => readBooksId.includes(book.bookId));
+  
   return (
     <ResponsiveContainer className="mt-8" width="100%" height={517}>
       <BarChart data={readBooks}>
